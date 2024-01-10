@@ -28,6 +28,28 @@ if ($email) {
 
 <body>
 
+  <!-- Success alert -->
+  <?php
+  if ($get_access === true) :
+  ?>
+    <div class="alert alert-success" role="alert">
+      L'email è scritta nel formato corretto
+    </div>
+  <?php
+  endif;
+  ?>
+
+  <!-- Warning alert -->
+  <?php
+  if ($get_access === false) :
+  ?>
+    <div class="alert alert-warning" role="alert">
+      L'email NON è scritta nel formato corretto
+    </div>
+  <?php
+  endif;
+  ?>
+
   <!-- FORM -->
   <main>
     <form action="index.php" method="GET">
@@ -35,27 +57,7 @@ if ($email) {
       <input type="text" name="email" id="email" placeholder="your-email@dom.com">
       <button type="submit">Invio</button>
 
-      <!-- Success alert -->
-      <?php
-      if ($get_access === true) :
-      ?>
-        <div class="alert alert-success" role="alert">
-          A simple success alert—check it out!
-        </div>
-      <?php
-      endif;
-      ?>
 
-      <!-- Warning alert -->
-      <?php
-      if ($get_access === false) :
-      ?>
-        <div class="alert alert-warning" role="alert">
-          A simple warning alert—check it out!
-        </div>
-      <?php
-      endif;
-      ?>
 
 
 
