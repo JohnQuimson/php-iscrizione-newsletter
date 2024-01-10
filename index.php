@@ -12,6 +12,17 @@
 
 </head>
 
+<?php
+$email = $_GET['email'];
+$get_access = null;
+
+if (str_contains($email, '@') && str_contains($email, '.')) {
+  $get_access = true;
+} else {
+  $get_access = false;
+}
+?>
+
 <body>
 
   <!-- FORM -->
@@ -22,14 +33,29 @@
       <button type="submit">Invio</button>
 
       <!-- Success alert -->
-      <div class="alert alert-success" role="alert">
-        A simple success alert—check it out!
-      </div>
+      <?php
+      if ($get_access === true) :
+      ?>
+        <div class="alert alert-success" role="alert">
+          A simple success alert—check it out!
+        </div>
+      <?php
+      endif;
+      ?>
 
       <!-- Warning alert -->
-      <div class="alert alert-warning" role="alert">
-        A simple warning alert—check it out!
-      </div>
+      <?php
+      if ($get_access === false) :
+      ?>
+        <div class="alert alert-warning" role="alert">
+          A simple warning alert—check it out!
+        </div>
+      <?php
+      endif;
+      ?>
+
+
+
     </form>
   </main>
 
