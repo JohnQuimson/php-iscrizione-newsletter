@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +11,28 @@
   <!-- Bootstrap CSS -->
 
 </head>
+
 <body>
-  
-<?php 
-  
-  $email = $_GET['email'];
-  echo $email;
 
-
-
-?>
-
-<!-- FORM -->
+  <!-- FORM -->
   <main>
     <form action="index.php" method="GET">
       <label for="email">Inserisci email</label>
       <input type="text" id="email" placeholder="your-email@dom.com">
       <button type="submit">Invio</button>
+
+      <!-- Success alert -->
+      <div class="alert alert-success" role="alert">
+        A simple success alert—check it out!
+      </div>
+
+      <!-- Warning alert -->
+      <div class="alert alert-warning" role="alert">
+        A simple warning alert—check it out!
+      </div>
     </form>
   </main>
 
 </body>
+
 </html>
