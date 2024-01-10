@@ -29,7 +29,7 @@ if (str_contains($email, '@') && str_contains($email, '.')) {
   <main>
     <form action="index.php" method="GET">
       <label for="email">Inserisci email</label>
-      <input type="text" id="email" placeholder="your-email@dom.com">
+      <input type="text" name="email" id="email" placeholder="your-email@dom.com">
       <button type="submit">Invio</button>
 
       <!-- Success alert -->
