@@ -16,10 +16,13 @@
 $email = $_GET['email'];
 $get_access = null;
 
-if (str_contains($email, '@') && str_contains($email, '.')) {
-  $get_access = true;
-} else {
-  $get_access = false;
+// verifiche 
+if ($email) {
+  if (str_contains($email, '@') && str_contains($email, '.')) {
+    $get_access = true;
+  } else {
+    $get_access = false;
+  }
 }
 ?>
 
